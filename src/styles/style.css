@@ -1,0 +1,45 @@
+/* CSS Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+:root {
+  --gray: rgb(160, 160, 160);
+  --border-gray: rgb(165, 165, 165);
+  --light-gray: #F3F3F3;
+  --soft-lavender: #e1e8f6;
+  --dark-gray: #DCE1E3;
+  --lapis: #39a0ca;
+  --ice-blue: #a0d2eb;
+  --peach: #f3756b;
+  --coffee: #e3dbc9;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #c9f9ff;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+}
+
+.card {
+  width: 200px;
+  height: 400px;
+  border: black solid;
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */
