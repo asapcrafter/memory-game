@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/memory-game/static/css/main.b89cc0f0.chunk.css",
+    "main.js": "/memory-game/static/js/main.96e0de36.chunk.js",
+    "main.js.map": "/memory-game/static/js/main.96e0de36.chunk.js.map",
+    "runtime-main.js": "/memory-game/static/js/runtime-main.1a6e00a8.js",
+    "runtime-main.js.map": "/memory-game/static/js/runtime-main.1a6e00a8.js.map",
+    "static/js/2.82ef28bf.chunk.js": "/memory-game/static/js/2.82ef28bf.chunk.js",
+    "static/js/2.82ef28bf.chunk.js.map": "/memory-game/static/js/2.82ef28bf.chunk.js.map",
+    "index.html": "/memory-game/index.html",
+    "static/css/main.b89cc0f0.chunk.css.map": "/memory-game/static/css/main.b89cc0f0.chunk.css.map",
+    "static/js/2.82ef28bf.chunk.js.LICENSE.txt": "/memory-game/static/js/2.82ef28bf.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/memory-game/static/media/minecraft-background.08374be7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a6e00a8.js",
+    "static/js/2.82ef28bf.chunk.js",
+    "static/css/main.b89cc0f0.chunk.css",
+    "static/js/main.96e0de36.chunk.js"
+  ]
+}
