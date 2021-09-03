@@ -17,6 +17,11 @@
     --coffee: #e3dbc9;
 }
 
+@font-face {
+    font-family: minecraftFont;
+    src: url(./Minecraftia-Regular.ttf);
+}
+
 body {
     width: 100%;
     height: 100%;
@@ -24,8 +29,15 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #c9f9ff;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.3;
+    // font-family: Arial, Helvetica, sans-serif;
+    font-family: minecraftFont, arial, Helvetica;
+    background-image: url('./minecraft-background.jpg'); 
+    background-size: auto;
+}
+
+.App {
+    width: 100%;
+    height: 100%;
 }
 
 img {
@@ -33,11 +45,23 @@ img {
     width: auto;
 }
 
+.header-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    .header {
+        padding-top: 50px;
+        font-size: 40px;
+    }
+}
+
 #gameboard-wrapper {
     .gameboard {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(7, 1fr);
         grid-template-rows: 1fr 1fr;
         // display: flex;
         // flex-direction: row;
@@ -48,12 +72,16 @@ img {
 .card {
     width: 185px;
     height: 270px;
-    border: black solid;
+    border: rgb(219, 219, 219) solid;
+    border-radius: 7px;
+    border-width: 2px;
     color: red;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px 6px 10px 6px;
+    background-color: #94dbffd3;
+
     &:hover .card-image {
         opacity: 0.85;
         transition: 0.55s;
@@ -64,5 +92,6 @@ img {
     }
     .card-name {
         padding-top: 5px;
+        font-size: 18px;
     }
 }

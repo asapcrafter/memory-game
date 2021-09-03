@@ -17,6 +17,10 @@ const Gameboard = () => {
     const handleLost = () => {
         resetStreak();
     }
+
+    const resetCards = () => {
+
+    }
     
     const shuffleArray = array => {
         for (let i = array.length - 1; i > 0; i--) {
@@ -25,7 +29,9 @@ const Gameboard = () => {
           array[i] = array[j];
           array[j] = temp;
         }
-        return array;
+        //Returns the first few items from the array to display.
+        const shuffledArray = array.slice(0, 14)
+        return shuffledArray;
     }
 
     const cardArray = [
@@ -39,10 +45,10 @@ const Gameboard = () => {
         <Card id='Bedrock' image='./img/Bedrock_JE2_BE2.webp' win={handleWin} lose={handleLost}/>,
         <Card id='Birch' image='./img/Birch_Log_(UD)_JE5_BE3.webp' win={handleWin} lose={handleLost}/>,
         <Card id='Bookshelf' image='./img/Bookshelf_JE4_BE2.webp' win={handleWin} lose={handleLost}/>,
-        <Card id='Anvil' image='.' win={handleWin} lose={handleLost}/>,
-        <Card id='Cactus' image='.' win={handleWin} lose={handleLost}/>,
-        <Card id='Cake' image='.' win={handleWin} lose={handleLost}/>,
-        <Card id='Pumpkin' image='.' win={handleWin} lose={handleLost}/>,
+        <Card id='Anvil' image='./img/Broken_Anvil_(N)_BE2.webp' win={handleWin} lose={handleLost}/>,
+        <Card id='Cactus' image='./img/Cactus_JE4.webp' win={handleWin} lose={handleLost}/>,
+        <Card id='Cake' image='./img/Cake_JE2.webp' win={handleWin} lose={handleLost}/>,
+        <Card id='Pumpkin' image='./img/Carved_Pumpkin_(S)_JE4.webp' win={handleWin} lose={handleLost}/>,
         <Card id='Copper Ore' image='.' win={handleWin} lose={handleLost}/>,
         <Card id='Diamond Ore' image='.' win={handleWin} lose={handleLost}/>,
         <Card id='Emerald Ore' image='.' win={handleWin} lose={handleLost}/>,

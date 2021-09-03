@@ -2,8 +2,10 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div>
-            Minecraft Memory Game
+        <div className="header-wrapper">
+            <div className='header'>
+                Minecraft Memory Game
+            </div>
         </div>
     );
 }
