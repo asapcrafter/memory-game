@@ -3,21 +3,28 @@ import React, { useState } from 'react';
 const Card = (props) => {
     const [selected, setSelected] = useState(false);
 
-    function handleClick() {
+    const handleClick = () => {
         selected === false ? setWin() : setLost();
     }
 
-    function setWin() {
+    const setWin = () => {
         setSelected(true);
+        props.win();
     }
 
-    function setLost() {
-        return
+    const setLost = () => {
+        props.lose();
     }
 
     return (
-        <div className='card' onClick={handleClick()}>
-            {props.id} HI
+        <div className='card' onClick={handleClick}>
+            <div className="card-image">
+                <img src={props.image} alt="#" />
+            </div>
+            <div className="card-name">
+                {props.id} 
+            </div>
+            {`${selected}`}
         </div>
     );
 }
