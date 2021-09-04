@@ -33,6 +33,8 @@ body {
     font-family: minecraftFont, arial, Helvetica;
     background-image: url('./minecraft-background.jpg'); 
     background-size: auto;
+    user-select: none;
+
 }
 
 .App {
@@ -43,6 +45,11 @@ body {
 img {
     height: 160px;
     width: auto;
+    -webkit-user-drag: none; 
+    -khtml-user-drag: none; 
+    -moz-user-drag: none; 
+    -o-user-drag: none; 
+    user-drag: none; 
 }
 
 .header-wrapper {
