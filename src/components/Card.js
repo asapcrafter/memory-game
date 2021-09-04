@@ -3,15 +3,28 @@ import React, { useState } from 'react';
 const Card = (props) => {
     const [selected, setSelected] = useState(false);
 
-    const audio = document.querySelector('#xp-sound');
-    audio.volume = 0.18;
+    const wonAudio = document.querySelector('#xp-sound');
+    wonAudio.volume = 0.18;
+    const lostAudio = document.querySelector('#lose-sound');
+    lostAudio.volume = 0.15;
 
     const handleClick = () => {
         if (selected === false) {
-            audio.play();
-            setTimeout(setWin(), 100);
+            if (wonAudio.paused) {
+                wonAudio.play();
+            }else {
+                wonAudio.currentTime = 0
+                wonAudio.play();
+            }
+            setTimeout(setWin(), 200);
         } else {
-            setTimeout(setLost(), 100)
+            if (lostAudio.paused) {
+                lostAudio.play();
+            } else {
+                lostAudio.currentTime = 0
+                lostAudio.play();
+            }
+            setTimeout(setLost(), 200);
         }
     }
 
@@ -25,7 +38,11 @@ const Card = (props) => {
     }
 
     if (props.reset === true) {
-        setSelected(false)
+        setTimeout(() => {
+            props.setReset(false);
+            setSelected(false);
+        }, 1
+        );
     }
 
     return (
@@ -36,7 +53,7 @@ const Card = (props) => {
             <div className="card-name">
                 {props.name} 
             </div>
-            {`${selected}`}
+            {/* {`${selected}`} */}
         </div>
     );
 }

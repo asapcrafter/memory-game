@@ -57,6 +57,8 @@ img {
         margin-top: 25px;
         padding-top: 15px;
         font-size: 45px;
+        letter-spacing: 1.7px;
+        word-spacing: 7px;
         text-align: center;
         border: black solid;
         border-width: 2.5px;
@@ -67,19 +69,42 @@ img {
 
 #score-wrapper {
     width: 100%;
-    height: 60px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    .score {
-        width: 300px;
-        background: white;
+    #score-container {
+        display: flex;
+        width: 900px;
+        height: 70px;
+        background: rgba(236, 236, 236, 0.856);
+        margin-top: 23px;
+        padding-top: 13px;
+        border-radius: 18px;
+        box-shadow: 0 5px 5px rgba(185, 184, 184, 0.541);
+        .instructions {
+            margin-left: 38px;
+            width: 550px;
+            word-spacing: 1px;
+        }
+        .score {
+            margin-left: 125px;
+            width: 150px;
+            word-spacing: 1.2px;
+            letter-spacing: 0.2px;
+            #streak {
+                color: rgb(17, 211, 17);
+            }
+            #highscore {
+                color: rgb(250, 166, 11);
+            }
+        }
     }
 }
 
 #gameboard-wrapper {
     width: 100%;
     .gameboard {
+        margin-top: 12px;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(7, 1fr);
@@ -94,8 +119,8 @@ img {
 }
 
 .card {
-    width: 190px;
-    height: 270px;
+    width: 195px;
+    height: 260px;
     border: rgb(219, 219, 219) solid;
     border-radius: 9px;
     border-width: 1.955px;
@@ -103,7 +128,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px 6px 10px 6px;
+    margin: 12px 7px 12px 7px;
     background-color: #94dbffd3;
     box-shadow: 0 5px 5px rgb(158, 158, 158);
     &:hover .card-image {
@@ -115,11 +140,16 @@ img {
         transform: translate(0em, 0.015em); 
         transition: 0.1s;
     }
+    &:active {
+        box-shadow: 0 5px 5px rgba(219, 205, 72, 0.726);
+
+    }
     .card-image {
-        padding-top: 15px;
+        padding-top: 18px;
     }
     .card-name {
-        padding-top: 10px;
+        padding-top: 15px;
         font-size: 19px;
+        letter-spacing: 0.5px;
     }
 }
