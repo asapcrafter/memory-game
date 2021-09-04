@@ -7,8 +7,11 @@ const Card = (props) => {
     wonAudio.volume = 0.18;
     const lostAudio = document.querySelector('#lose-sound');
     lostAudio.volume = 0.15;
+    const backgroundAudio = document.getElementById("background-audio");
+    backgroundAudio.volume = 0.3;
 
     const handleClick = () => {
+        backgroundAudio.play();
         if (selected === false) {
             if (wonAudio.paused) {
                 wonAudio.play();
