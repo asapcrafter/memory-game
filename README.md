@@ -1,4 +1,4 @@
-# Minecraft Memory Game
+# Live Demo: [Minecraft Memory Game](https://asapcrafter.github.io/memory-game/)
 Players select any game cards to build a streak. Pressing a previously-selected card does not count towards this streak and resets the current score. A high score counter keeps track of the longest streak. 
 ### Description
 This memory game was made by using ReactJS with the main features of ES6 modules, React functional components, and basic CSS styling with SASS. 
